@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QMediaPlayer>
+#include <QFileDialog>
 #include <QDebug>
 
 namespace Ui {
@@ -30,9 +31,12 @@ private slots:
 
     void on_durationChanged(qint64 position);
 
+    void on_browseButton_clicked();
+
 private:
     Ui::Dialog *ui;
     QMediaPlayer* player;
+    QString songName;
 };
 
 #endif // DIALOG_H
